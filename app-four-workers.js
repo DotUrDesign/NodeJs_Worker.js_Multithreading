@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 app.use(express.json());
 const {Worker} = require('worker_threads');
-const THREAD_COUNT = 8;
+const THREAD_COUNT = 4;
 
 function createWorker() { 
     return new Promise((resolve, reject) => {
@@ -38,18 +38,14 @@ app.get('/blocking', async (req, res) => {
     // for(let i=0;i<workerPromises.length;i++)
     //     console.log(workerPromises[i]);
     
-    for(let i=0;i<thread_results.length;i++)
-        console.log(thread_results[i]);
-    
+    // for(let i=0;i<thread_results.length;i++)
+    //     console.log(thread_results[i]);
+
 
     let total = thread_results[0] + 
                 thread_results[1] + 
                 thread_results[2] +
-                thread_results[3] +
-                thread_results[4] +
-                thread_results[5] +
-                thread_results[6] +
-                thread_results[7];
+                thread_results[3];
     
     res.status(200).send(`result is ${total}`);
 })
