@@ -1,0 +1,13 @@
+to get the number of processors of your system
+echo %NUMBER_OF_PROCESSORS%
+
+to get the time to load the site (in git bash)
+time curl --get http://localhost:4000/blocking
+
+
+A processor is the entire unit responsible for carrying out computational tasks, and it may consist of one or more cores. Cores, on the other hand, are individual processing units within the processor, and having multiple cores allows the CPU to handle multiple tasks concurrently, leading to improved performance in multitasking scenarios and parallel processing.
+
+
+
+
+
